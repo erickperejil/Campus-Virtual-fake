@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .firstpage{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .secondpage{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: none;
+            flex-direction: row-reverse;
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/Captura_de_pantalla_2024-12-07_234808_2eVDmT07F.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        button {
+            box-shadow: none;
+            width: 100%;
+            border: none;
+        }
+        button:hover {
+            color: #fff !important;
+    background-color: #0e4a98 !important;
+    border-color: #0e4a98 !important;
+    box-shadow: 0 1px 1px rgba(14, 74, 152, .55), 0 2px 2px rgba(14, 74, 152, .35), 0 4px 4px rgba(14, 74, 152, .15), 0 6px 8px rgba(14, 74, 152, .15), 0 8px 16px rgba(14, 74, 152, .15) !important;
+        } */
+        .border{
+            border: 2px solid red;
+        }
+        .border2{
+            border: 2px solid blue;
+        }
+        .page{
+            height: 100vh;
+            width: 100%;
+        }
+        .nav{
+            height: 46px;
+            position: sticky;
+            padding: 5px 90px 5px 40px;
+            background-color: #ffffff;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+        .block1{
+            width: 100%;
+            background-color: blue;
+            background-position: bottom;
+            background-size: cover;
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/frontpage-bg_YlkvTpld-.jpg);
+            height: 475px;
+        }
+        .logo{
+            margin-top: 23px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 20px 50px 0;
+            height: 87px;
+            width: 97px;
+
+        }
+        .logo-imagen{
+            height: 100%;
+            background-position: center;
+            background-size:cover;
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/thumbnail_logo-02_86odzl8gw.png);
+        }
+        .ingreso{
+            margin-top: 30px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .letra5{
+            margin-bottom: 0;
+            font-size: 0.75rem;
+            color: #fff;
+            font-weight: 600;
+            line-height: 1.4;
+            word-break: break-word;
+            margin-top: 0;
+        }
+        .letra1{
+            margin: .5rem 0;
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 550;
+            line-height: 1.4;
+            word-break: break-word;
+            font-family: Inter, sans-serif;
+        }
+        .botoncontenedor{
+            flex-flow: column;
+            align-items: center;
+            margin-top: 3rem !important;
+            justify-content: center !important;
+        }
+        .acceso{
+            background-color: #ffc20e !important;
+            color: #1b3869 !important;
+            padding: 16px 28px;
+            cursor: pointer;
+            font-family: Inter, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            height: 63.3008px;
+            line-height: 28.8px;
+            border: 1px solid rgb(18, 84, 161);
+            border-radius: 5px;
+        }
+        .acceso:hover{
+            background-color: #f7d87d !important;
+        }
+        .imagenfake{
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/Captura_de_pantalla_2024-12-07_222424_Ma6MB86F5.png);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        .imagenfake2{
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/Captura_de_pantalla_2024-12-07_223049_VIFHTFzc9.png);
+            height: 520px;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+        .imagenfake3{
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/Captura_de_pantalla_2024-12-07_223715_SEaeXUaq8.png);
+            height: 570px;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        .idioma{
+            padding: 11px 15px;
+            font-family: Inter, sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: rgb(66, 66, 66);
+            background-color: #fff;
+            border: 1px solid #e4e8f0;
+            box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .05);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .acceder{
+            padding: 11px 14px;
+            font-family: Inter, sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: rgb(18, 84, 161);
+            box-shadow: 0 2px 1px 0 rgba(0, 0, 0, .05);
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        .separador{
+            width: 1px; /* Grosor de la línea */
+            height: 40%; /* Altura completa del contenedor o un valor fijo */
+            background-color: #b8b8b8c6; /* Color de la línea */
+            margin: 0 10px; /* Espaciado a los lados */
+            display: inline-block; /* Asegura que se pueda usar entre elementos */
+        }
+        .separador1{
+            margin-left: auto; /* Asegura que se pueda usar entre elementos */
+        }
+        .icono{
+            color: rgb(255, 255, 255)!important;
+            margin-left: 8px;
+            opacity:0.6;
+            font-size: 0.75rem;
+        }
+        .fondo{
+            height: 100%;
+            width: 66%;
+        }
+        .datos{
+            width: 390px;
+            margin-left: auto;
+            padding: 1.75rem;
+            background-color: #fff;
+            padding-top: 2.25rem;
+        }
+        .logo2{
+            height: 60px;
+        }
+        .imagen2{
+            height: 120px;
+            width: 120px;
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/thumbnail_logo-02_86odzl8gw.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .formcontainer{
+            width: 100%;
+            margin-top: 15px;
+        }
+        .logocontainer2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .input{
+            width: 100%;
+            padding: 10px 10px 12px 40px;
+            font-family: Inter, sans-serif;
+            box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .13), inset 0 2px 1px 0 rgba(0, 0, 0, .05);
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+            font-size: .85rem;
+            line-height: 180%;
+            color: #212121;
+            font-weight: 400;
+        }
+        .input:focus {
+            border: 1px solid #1282f8;
+            outline: none;
+        }
+        .inputcontainer{
+            margin: 0px 0 10px 0;
+            display: flex;
+            justify-content: center;
+            position: relative;            
+        }
+        .inputcontainer i{
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 0.75rem;          
+        }
+        .letra4{
+            margin-bottom: 0;
+            font-size: 0.65rem;
+            color: rgb(155, 155, 155);
+            font-weight: 400;
+            font-family:Inter, sans-serif;
+            line-height: 1.6;
+            word-break: break-word;
+            margin-top: 0;
+        }
+        .containerforgot{
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0px 0px 10px 0;
+        }
+        .togglecontenedor{
+            height: 40px;
+        }
+        .toggle{
+            margin-top: 10px;
+            height: 100%;
+            width: 100%;
+            background-image: url(https://ik.imagekit.io/diancrochet/Fotos/Captura_de_pantalla_2024-12-08_005547_UMAT-yji8.png);
+            background-position: right;
+            background-size: cover;
+        }
+        .acceder2{
+            font-family: Inter, sans-serif;
+            font-weight: 500;
+            color: #fff;
+            background-color: rgb(18, 84, 161);
+            cursor: pointer;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            padding: 17px !important;
+            font-size: 0.75rem;
+            box-shadow: 0 1px 1px rgba(7, 66, 205, .15), 0 1px 2px rgba(7, 66, 205, .15), 0 1px 2px rgba(7, 66, 205, .15), 0 2px 4px rgba(7, 66, 205, .15), 0 4px 12px rgba(7, 66, 205, .15) !important;
+            transition: all 350ms ease;
+
+        }
+
+    </style>
+</head>
+
+<body class="">
+    <div class="firstpage">
+        <nav class="nav">
+            <div class="separador separador1"></div>
+            <div>
+                <a class="idioma">Español (es)</a>
+            </div>
+            <div class="separador"></div>
+            <div>
+                <a class="acceder">Acceder<i class="fas fa-sign-in-alt icono"></i></a>
+            </div>
+        </nav>
+        <div class="block1">
+            <div class="logo">
+                <div class="logo-imagen"></div>
+            </div>
+            <div class="ingreso">
+                <h5 class="letra5">Universidad Nacional Autonoma de Honduras</h5>
+                <h1 class="letra1">Bienvenido(a) al Campus Virtual</h1>
+                <div class="botoncontenedor">
+                    <a class="acceso">ACCEDER AL CAMPUS VIRTUAL</a>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="imagenfake"></div>
+        </div>
+        <div class="">
+            <div class="imagenfake2"></div>
+        </div>
+        <div class="">
+            <div class="imagenfake3"></div>
+        </div>
+    </div>
+    <div class="secondpage page">
+        <div class="datos">
+            <div class="formcontainer">
+                <a class="logocontainer2"><div class="imagen2"></div></a>
+                <div class="loginbox">
+                    <form action="" method="POST" class="border1">
+                        <div class="inputcontainer">
+                            <i class="fas fa-user"></i>
+                            <input type="email" name="email" id="email" class="form-control input" placeholder="Nombre de usuario">
+                        </div>
+                        <div class="inputcontainer">
+                            <i class="fas fa-key"></i> <!-- Ícono de llave -->
+                            <input type="password" name="password" id="password" class="form-control input" placeholder="Contraseña">
+                        </div>
+                        <div class="containerforgot">
+                            <h4 class="letra4">¿Olvidó su nombre de usuario o contraseña?</h5>
+                        </div>
+                        <div>
+                            <button type="submit" class="acceder2 boton" >Acceder</button>
+                        </div>
+                        <div class="togglecontenedor">
+                            <div class="toggle"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="login-container">
+        <h2>Login</h2>
+        <form action="" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div> -->
+    <script>
+        // Seleccionamos el enlace "ACCEDER AL CAMPUS VIRTUAL"
+        const accesoBtn = document.querySelector('.acceso');
+        const accesoBtn2 = document.querySelector('.acceder');
+        const redirect = document.querySelector('.acceder2');
+        const accesoBtnback = document.querySelector('.imagen2');
+        
+        // Seleccionamos las páginas que queremos alternar
+        const firstPage = document.querySelector('.firstpage');
+        const secondPage = document.querySelector('.secondpage');
+
+        // Añadimos el evento click al botón de acceso
+        accesoBtn.addEventListener('click', () => {
+            // Alternamos la visibilidad de las páginas
+            if (firstPage.style.display !== 'none') {
+                firstPage.style.display = 'none';
+                secondPage.style.display = 'flex';
+            } else {
+                firstPage.style.display = 'flex';
+                secondPage.style.display = 'none';
+            }
+        });
+        accesoBtn2.addEventListener('click', () => {
+            // Alternamos la visibilidad de las páginas
+            if (firstPage.style.display !== 'none') {
+                firstPage.style.display = 'none';
+                secondPage.style.display = 'flex';
+            } else {
+                firstPage.style.display = 'flex';
+                secondPage.style.display = 'none';
+            }
+        });
+        accesoBtnback.addEventListener('click', () => {
+            // Alternamos la visibilidad de las páginas
+            if (firstPage.style.display !== 'none') {
+                firstPage.style.display = 'none';
+                secondPage.style.display = 'flex';
+            } else {
+                firstPage.style.display = 'flex';
+                secondPage.style.display = 'none';
+            }
+        });
+        redirect.addEventListener('click', (event) => {
+            // Evitamos que el formulario se envíe (si lo fuera)
+            event.preventDefault();
+            // Redirigimos a la página de login del campus virtual
+            window.location.href = "https://campusvirtual.unah.edu.hn/login/index.php";
+        });
+    </script>
+</body>
+</html>
